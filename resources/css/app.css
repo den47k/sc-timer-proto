@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+    .sidebar-element {
+        @apply relative flex items-center justify-start py-3
+        font-roboto text-sm
+        text-gray-200 opacity-80 hover:text-white hover:opacity-100
+        transition-all duration-100
+        cursor-pointer;
+    }
+
+    .sideabr-icon {
+        @apply flex items-center justify-center;
+    }
+
+
+    .sidebar-footer-icon {
+        @apply p-3 mx-3 text-gray-200
+        hover:bg-gray-600 hover:text-white rounded-xl cursor-pointer
+        transition-colors duration-100;
+    }
+}
+
+@layer utilities {
+
+    .icon-default {
+        @apply w-6 h-6;
+    }
+}
+
+html {
+    scrollbar-gutter: auto !important;
+}
+
+html:has(body.content-overflow-y) {
+    scrollbar-gutter: stable !important;
+}
